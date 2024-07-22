@@ -133,8 +133,9 @@ def dataGenerator(length, only_numbers=False):
         data = [random.choice(string.digits) for _ in range(length)]
     else: # password
         length += random.randint(1, 10)
-        data = [ # 1 uppercase letter, 1 number, 1 special character
+        data = [ # 1 uppercase & lowercase letter, 1 number, 1 special character
             random.choice(string.ascii_uppercase),
+            random.choice(string.ascii_lowercase),
             random.choice(string.digits),
             random.choice(string.punctuation)
         ]
